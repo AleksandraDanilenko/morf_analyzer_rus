@@ -14,6 +14,7 @@ Russian Morphological Text Analysis and Bigrams finding Website.
 **Для работы с pdf файлами необходим poppler, иначе будет возвращаться ошибка #127**
 1. Скачайте последнюю версию Python с оффициального сайта: https://www.python.org/downloads/.
 2. Установите Python.
-3. Чтобы запустить сайт, запустите файл app.py из корневой папки проекта или через командную строку.
-4. Откройте сайте в браузере, перейдя по ссылке указанной в командной строке.
+3. Прописать в командной строке следующик команды: pip install pymorphy3, pip install nltk, pip install wordcloud, pip install razdel, python -m nltk.downloader stopwords, pip install textract.
+4. Чтобы запустить сайт, запустите файл app.py из корневой папки проекта или через командную строку.
+5. Откройте сайте в браузере, перейдя по ссылке указанной в командной строке.
 
