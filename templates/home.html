@@ -1,0 +1,37 @@
+<!doctype html>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}" />
+<head>
+    <link  href="main.css" rel="stylesheet">
+</head>
+<body>
+<form  action="" method="post" enctype="multipart/form-data">
+<title>Морфологический анализ текста</title>
+<div style="position:absolute;
+             height:800px;
+              width:600px ;
+               background-color:#69686B;
+               left: 300px;
+               padding-left:10px"/>
+
+<div
+style="
+position:absolute;
+background: #ffffff ;
+box-shadow:0 0 55px rgba(0,0,0,0.5);
+width: 450px;
+height:350px;
+padding: 10px 10px 10px 10px;
+margin: 100px 100px 200px -150px;" >
+    <h1 style="text-align: center;">
+        Морфологический анализ текста и нахождение биграмм</h1>
+    <h2><input class="button2" type="submit" title="Обрабатывается только текст!" value="Загрузить файл" ></h2>
+    <label for="images" class="drop-container">
+      <span class="drop-title"></span>
+      <h1><input type="file" id="images" name="file" accept=".txt, .pdf, .doc, .docx" required></h1>
+    </label>
+</div>
+<div>
+<img src="static/pict/creative-composition-with-different-books_23-2148851026.jpg" style="background: #0000000 ; width: 700px; margin: 220px 200px 100px 250px;"/>
+</div>
+</form>
+</body>

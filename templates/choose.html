@@ -1,0 +1,35 @@
+<!doctype html>
+<title>Морфологический анализ</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/choose.css') }}" />
+
+    <form  action="" method="post" enctype="multipart/form-data">
+    <div style="
+             height:200px;
+              width:700px ;
+              margin: 200px 0px 0px 50px;
+              box-shadow:0 0 55px rgba(0,0,0,0.5);
+               background-color:#ffffff;" class="split left">
+  <div class="centered">
+      <h1 style="text-align: center;">Морфологический анализ текста</h1>
+      <form action="/choose_analyse" method="POST">
+    <input class="button1" type="submit" name="dict" class="btn btn-dark" value="Начать">
+    </form>
+  </div>
+    <h3 style="text-align: center;">Анализ и составление биграмм будет выполняться примерно {{time_analy}} секунд!</h3>
+</div>
+
+<div style="
+             height:200px;
+              width:680px ;
+              margin: -220px 0px 200px 800px;
+              box-shadow:0 0 55px rgba(0,0,0,0.5);
+               background-color:#bababa;" class="split right">
+  <div class="centered">
+    <h1 style="text-align: center;">Поиск биграмм</h1>
+      <form action="/choose_bigram" method="POST">
+         <input class="button4" type="text" name="word" placeholder="Введите слово">
+         <input class="button3" type="submit" class="btn btn-dark" value="Найти">
+      </form>
+  </div>
+</div>
+</form>
