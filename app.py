@@ -11,7 +11,7 @@ would_name = "w.jpg"
 
 app=Flask(__name__, static_folder='static')
 UPLOAD_FOLDER = ''
-ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'doc', 'docx'])
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'doc', 'docx'}
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 def allowed_file(filename):
     return '.' in filename and \
@@ -34,7 +34,7 @@ def upload():
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
             file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            text = textract.process(filename)
+            text = textract.process(filename, encoding='utf-8')
             if os.path.isfile(file_name):
                 os.remove(file_name)
             if os.path.isfile('res.txt'):
